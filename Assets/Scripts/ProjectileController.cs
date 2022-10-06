@@ -16,6 +16,10 @@ public class ProjectileController : MonoBehaviour
         transform.Translate(this.velocity * Time.deltaTime);
     }
 
+    public void SetVelocity(Vector3 v){
+        this.velocity = v;
+    }
+
     private void OnTriggerEnter(Collider col)
     {
         if (col.gameObject.tag == this.tagToDamage)
